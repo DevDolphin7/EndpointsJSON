@@ -1,3 +1,4 @@
+#!/bin/bash
 python3 -m venv .virtual-environment
 echo "Local virtual environment created"
 source .virtual-environment/bin/activate
