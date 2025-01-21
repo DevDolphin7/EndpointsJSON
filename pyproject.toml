@@ -1,0 +1,22 @@
+[project]
+name = "src"
+version = "0.1.0"
+authors = [
+  { name="Dan Olver", email="DevDolphin7@outlook.com" },
+]
+description = "Create and maintain endpoint.json files with ease"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+readme = "README.md"
+license = {file="LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/DevDolphin7/EndpointJSON"
+
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core.buildapi"
