@@ -8,6 +8,6 @@ class Fonts():
     def __init__(self):
         self.header = ctk.CTkFont(family="Helvetica", size=20)
         self.emoji = ctk.CTkFont(family="NotoEmoji-VariableFont_wght", size=20)
-        self.body = ctk.CTkFont(family="Helvetica", size=15)
-        self.footer = ctk.CTkFont(family="Helvetica", size=10)
-        self.footer_link = ctk.CTkFont(family="Helvetica", size=10, underline=True, weight="bold")
+        self.body = ctk.CTkFont(family="Helvetica", size=13)
+        self.footer = ctk.CTkFont(family="Helvetica", size=11)
+        self.footer_link = ctk.CTkFont(family="Helvetica", size=12, underline=True, weight="bold")
