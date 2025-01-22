@@ -12,7 +12,7 @@ class EndpointsJSON (ctk.CTk):
         self.resizable(width=False, height=False)
         
         self.frame = ctk.CTkFrame(self)
-        self.frame.pack(fill="both", padx=20, pady=20)
+        self.frame.pack(fill="both", expand=True, padx=10, pady=10)
         
         self.content = "home"
         
