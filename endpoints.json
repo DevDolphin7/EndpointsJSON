@@ -1,1 +1,17 @@
-{"test": "hello"}
+{
+    "GET /api": {
+        "description": "Hello, world",
+        "Response": [
+            "Nooiiiceeeee",
+            20
+        ]
+    },
+    "GET /api/test": {
+        "Description": "testing testing 123",
+        "Queries": [
+            "test1",
+            "all ok here",
+            "here too"
+        ]
+    }
+}
