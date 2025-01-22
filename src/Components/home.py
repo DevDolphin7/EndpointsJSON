@@ -16,7 +16,7 @@ class Home ():
                                   wraplength=500)
         
 
-        self.button = ctk.CTkButton(self.frame, text="Open file", font=Fonts().body, command=self.select_file, width=100, height=100, corner_radius=50)
+        self.button = ctk.CTkButton(self.frame, text="Open file", font=Fonts().header, command=self.select_file, width=100, height=100, corner_radius=50)
         
         self.label.pack(pady=10)
         self.button.pack(pady=10)
