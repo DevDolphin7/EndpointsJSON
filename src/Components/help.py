@@ -25,7 +25,7 @@ class Help ():
                                              onvalue="light",
                                              offvalue="dark")
         
-        self.label.pack(side=ctk.LEFT, padx=10)
+        self.label.pack(side=ctk.LEFT, padx=5)
         self.hyperlink.pack(side=ctk.LEFT)
         self.light_dark_mode.pack(side=ctk.RIGHT, padx=10)
         
