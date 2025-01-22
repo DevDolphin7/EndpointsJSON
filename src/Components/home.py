@@ -8,14 +8,19 @@ class Home ():
         self.set_content = set_content
         self.file = ""
         
-        self.label = ctk.CTkLabel(frame,
-                                  text='This app is designed to help you keep an "endpoints.json" file up to date while developing a back-end / server!',
+        self.frame = ctk.CTkFrame(frame, corner_radius=10)
+        
+        self.label = ctk.CTkLabel(self.frame,
+                                  text='Keep your "endpoints.json" file up to date while developing an API!',
                                   font=Fonts().header,
-                                  wraplength=600)
-        self.label.pack()
+                                  wraplength=500)
+        
 
-        self.button = ctk.CTkButton(frame, text="In home", font=Fonts().body, command=self.select_file)
-        self.button.pack()
+        self.button = ctk.CTkButton(self.frame, text="Open file", font=Fonts().body, command=self.select_file, width=100, height=100, corner_radius=50)
+        
+        self.label.pack(pady=10)
+        self.button.pack(pady=10)
+        self.frame.pack(fill="x", expand=True, padx=20)
         
     @property
     def file(self) -> str:
