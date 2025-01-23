@@ -36,13 +36,13 @@ _Manually formatting the file can be a pain_, this app allows you to _concentrat
 
 _Navigate to the directory where you'd like to install it_ and run:
 
-| Linux / Mac / WSL                                              | Windows                                                        |
-| -------------------------------------------------------------- | -------------------------------------------------------------- |
-| - `git clone https://github.com/DevDolphin7/EndpointsJSON.git` | - `git clone https://github.com/DevDolphin7/EndpointsJSON.git` |
-| - `cd EndpointsJSON`                                           | - `cd EndpointsJSON`                                           |
-| - `./install.sh`                                               | - `.\install.bat`                                              |
-| - `source .virtual-environment/bin/activate`                   |                                                                |
-| - `python3 src/app.py`                                         | - `py src\app.py`                                              |
+| Linux / Mac / WSL                                            | Windows                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `git clone https://github.com/DevDolphin7/EndpointsJSON.git` | `git clone https://github.com/DevDolphin7/EndpointsJSON.git` |
+| `cd EndpointsJSON`                                           | `cd EndpointsJSON`                                           |
+| `./install.sh`                                               | `.\install.bat`                                              |
+| `source .virtual-environment/bin/activate`                   |                                                              |
+| `python3 src/app.py`                                         | `py src\app.py`                                              |
 
 > 💡The install script creates a local virtual environment to install the dependencies and locally installs the src module for sibling imports.
 
@@ -52,7 +52,7 @@ _Navigate to the directory where you'd like to install it_ and run:
 -   Look for "Python: Select Interpreter" 🐍
 -   Select the one that contains ".virtual-environment"
 
-To keep the list of dependencies up to date, it's recommended adding and removing pip packages through `./add-package.sh` and `./remove-package.sh` 🚀
+> 💡To keep the list of dependencies up to date, it's recommended adding and removing pip packages through the `add-package` and `remove-package` scripts 🚀
 
 # Dependencies
 
