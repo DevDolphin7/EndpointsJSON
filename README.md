@@ -2,14 +2,14 @@
 
 This app is designed to help you maintain an `endpoints.json` file while developing an API.
 
-Manually having to format the file can be a pain, this app allows you to concentrate on the contents of the file and deals with the formatting for you. It manages formatting for:
+_Manually formatting the file can be a pain_, this app allows you to _concentrate on the contents_ of the file and deals with the formatting for you. **It manages formatting for**:
 
--   The HTML method
--   The endpoint path
--   The detailed information for each endpoint
--   The order of the endpoints
--   Removing an endpoint
--   Adding a new endpoint with detailed information
+-   The HTML method 🗳️
+-   The endpoint path 👣
+-   The detailed information for each endpoint ℹ️
+-   The order of the endpoints 🔀
+-   Removing an endpoint ❌
+-   Adding a new endpoint with detailed information ➕
 
 # Images
 
@@ -40,7 +40,7 @@ Manually having to format the file can be a pain, this app allows you to concent
 -   `source .virtual-environment/bin/activate`
 -   `python app.py`
 
-You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code:](https://code.visualstudio.com/docs/python/environments):
+You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code](https://code.visualstudio.com/docs/python/environments):
 
 -   Open the Command Palette 🎨
 -   Look for "Python: Select Interpreter" 🐍
