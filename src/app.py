@@ -9,7 +9,6 @@ class EndpointsJSON (ctk.CTk):
         
         self.title("Endpoints JSON")
         self.geometry("640x480")
-        self.resizable(width=False, height=False)
         
         self.frame = ctk.CTkFrame(self)
         self.frame.pack(fill="both", expand=True, padx=10, pady=10)
