@@ -1,3 +1,4 @@
+@ECHO off
 py -m venv .virtual-environment
 ECHO "Local virtual environment created"
 powershell -Command .\.virtual-environment\Scripts\activate
