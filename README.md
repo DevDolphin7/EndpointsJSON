@@ -34,11 +34,13 @@ _Manually formatting the file can be a pain_, this app allows you to _concentrat
 
 ## For Linux / Mac / WSL developers
 
+_Navigate to the directory where you'd like to install it_ and run:
+
 -   `git clone https://github.com/DevDolphin7/EndpointsJSON.git`
--   `cd ./EndpointsJSON`
+-   `cd EndpointsJSON`
 -   `./install.sh` <- this script creates a local virtual environment to install the dependencies and locally installs the src module for sibling imports
 -   `source .virtual-environment/bin/activate`
--   `python app.py`
+-   `python3 src/app.py`
 
 You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code](https://code.visualstudio.com/docs/python/environments):
 
@@ -47,6 +49,23 @@ You may wish to consider adding the virtual environment to the path of your deve
 -   Select the one that contains ".virtual-environment"
 
 To keep the list of dependencies up to date, it's recommended adding and removing pip packages through `./add-package.sh` and `./remove-package.sh` 🚀
+
+# Dependencies
+
+-   [Python 3](https://www.python.org/downloads/)
+-   [pip](https://packaging.python.org/en/latest/overview/)
+
+Pip package dependencies are listed in dependencies.txt:
+
+-   customtkinter==5.2.2
+-   darkdetect==0.8.0
+-   distro==1.9.0
+-   fonttools==4.55.4
+-   packaging==24.2
+-   pillow==11.1.0
+-   setuptools==75.8.0
+-   wheel==0.45.1
+-   The `install.sh` script will install a local copy of the `src` directory as a module, run `pip freeze` to see it.
 
 # Support
 
