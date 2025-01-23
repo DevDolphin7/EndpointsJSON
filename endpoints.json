@@ -1,7 +1,9 @@
 {
   "GET /api": {
     "description": "serves up a json representation of all the available endpoints of the api",
-    "exampleResponse": { "endpoints": "<this JSON parsed to an object>" }
+    "exampleResponse": {
+      "endpoints": "<this JSON parsed to an object>"
+    }
   },
   "GET /api/users": {
     "description": "Get all users",
@@ -35,8 +37,14 @@
     "queries": [],
     "exampleResponse": {
       "topics": [
-        { "slug": "coding", "description": "Code is love, code is life" },
-        { "slug": "football", "description": "FOOTIE!" }
+        {
+          "slug": "coding",
+          "description": "Code is love, code is life"
+        },
+        {
+          "slug": "football",
+          "description": "FOOTIE!"
+        }
       ]
     }
   }
