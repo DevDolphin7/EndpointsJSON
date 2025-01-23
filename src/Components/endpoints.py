@@ -2,7 +2,8 @@ import customtkinter as ctk
 import json
 from typing import Type, Callable
 from .endpoint import Endpoint
-from src.Utils.utils import get_all_endpoints
+from .addnew import AddNewEndpoint
+from src.Utils.utils import get_all_endpoints, get_endpoint_from_user_interaction, reorder_endpoints
 from src.Fonts.fonts import Fonts
 
 class Endpoints ():
@@ -22,6 +23,7 @@ class Endpoints ():
         self.frame.bind_all("<Button-5>", lambda e: self.frame._parent_canvas.yview("scroll", 1, "units"))
               
         self.load_endpoints()
+        self.add_new = AddNewEndpoint(self.frame, self.save_file, self.reload)
         
         self.file_path_label.pack(side=ctk.LEFT, padx=5)      
         self.utility_frame.pack(fill="x", padx=5, pady=5)    
@@ -46,7 +48,10 @@ class Endpoints ():
         
     def load_endpoints(self) -> None:
         with open(self.file_path) as json_contents:
-            self.endpoints: dict = json.load(json_contents)
+            try:
+                self.endpoints: dict = json.load(json_contents)
+            except json.decoder.JSONDecodeError:
+                self.endpoints: dict = {}
             json_contents.close()
             
         for endpoint, data in self.endpoints.items():
@@ -65,38 +70,19 @@ class Endpoints ():
     def reload(self) -> None:
         self.set_content("endpoints")
         
-    def get_endpoint_from_user_interaction(self, endpoint: str, data: dict[str, str|list|dict]) -> str:
-        for original_endpoint, original_data in self.endpoints.items():
-            if endpoint == original_endpoint and data == original_data:
-                return endpoint
-        
     def move_endpoint(self, direction: str, endpoint: str, data: dict[str, str|list|dict]) -> None:
-        if direction == "up":
-            index_direction = -1
-        elif direction == "down":
-            index_direction = 1
+        current_endpoint = get_endpoint_from_user_interaction(self.endpoints, endpoint, data)
         
-        current_endpoint = self.get_endpoint_from_user_interaction(endpoint, data)
-        
-        endpoints: list[str] = list(self.endpoints.keys())
-        current_index = endpoints.index(current_endpoint)
-        new_index = current_index + index_direction
-        
-        if (new_index < 0) or (new_index == len(endpoints)):
+        try:
+            reordered_endpoints = reorder_endpoints(self.endpoints, current_endpoint, direction, self.frame)
+        except IndexError:
             return
         
-        all_endoints = get_all_endpoints(self.frame)
-        
-        endpoint_key = endpoints.pop(current_index)
-        endpoints.insert(new_index, endpoint_key)
-        
-        reordered_endoints = {key: all_endoints[key] for key in endpoints}
-        
-        self.save_file(data_to_save=reordered_endoints)
+        self.save_file(data_to_save=reordered_endpoints)
         self.reload()              
                 
     def delete_endpoint(self, endpoint: str, data: dict[str, str|list|dict]) -> None:
-        current_endpoint = self.get_endpoint_from_user_interaction(endpoint, data)
+        current_endpoint = get_endpoint_from_user_interaction(self.endpoints, endpoint, data)
         
         all_endoints = get_all_endpoints(self.frame)
         all_endoints.pop(current_endpoint, None)
