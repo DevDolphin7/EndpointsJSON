@@ -1,4 +1,6 @@
 import customtkinter as ctk
+from PIL import ImageTk
+import os
 from Components import Home, Endpoints, Help
 
 ctk.set_default_color_theme("green")
@@ -9,6 +11,7 @@ class EndpointsJSON (ctk.CTk):
         
         self.title("Endpoints JSON")
         self.geometry("640x480")
+        self.set_logo()
         
         self.frame = ctk.CTkFrame(self)
         self.frame.pack(fill="both", expand=True, padx=10, pady=10)
@@ -28,6 +31,13 @@ class EndpointsJSON (ctk.CTk):
             self._content = content
             self.remove_content()
             self.load_content()
+            
+    def set_logo(self):
+        logo_dark_path = os.path.join(os.path.dirname(__file__), "Assets", "EndpointsJSONLogo-dark.png")
+ 
+        logo_dark = ImageTk.PhotoImage(file=logo_dark_path)
+        
+        self.iconphoto(False, logo_dark)
             
     def set_content(self, content: str) -> None:
         self.content = content
