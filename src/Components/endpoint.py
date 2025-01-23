@@ -9,7 +9,7 @@ class Endpoint ():
                  move_endpoint: Callable[[str, str, dict[str, str|list|dict]], None],
                  delete_endpoint: Callable[[str, dict[str, str|list|dict]], None]):
         self.full_endpoint = endpoint
-        self.method, self.endpoint = endpoint.split(" ")
+        self.method, *self.endpoint = endpoint.split(" ")
         self.data = data
         self.move_endpoint = move_endpoint
         self.delete_endpoint = delete_endpoint

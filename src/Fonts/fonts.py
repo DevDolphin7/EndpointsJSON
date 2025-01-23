@@ -1,7 +1,7 @@
 import customtkinter as ctk
 import os
 
-emoji_font_path = os.path.join(os.path.dirname(__file__), "Noto_Emoji/NotoEmoji-VariableFont_wght.ttf")
+emoji_font_path = os.path.join(os.path.dirname(__file__), "Noto_Emoji", "NotoEmoji-VariableFont_wght.ttf")
 ctk.FontManager.load_font(emoji_font_path)
 
 class Fonts():
