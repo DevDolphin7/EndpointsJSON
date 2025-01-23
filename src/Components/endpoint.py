@@ -55,10 +55,10 @@ class Endpoint ():
 
             frame = ctk.CTkFrame(self.detail_tab, corner_radius=10)            
             title_entry = ctk.CTkEntry(frame, textvariable=title_var, width=140)
-            info_entry = ctk.CTkEntry(frame, textvariable=info_var, width=360)
+            info_entry = ctk.CTkEntry(frame, textvariable=info_var)
             
             title_entry.pack(side=ctk.LEFT, padx=5)
-            info_entry.pack(side=ctk.LEFT, padx=5)
+            info_entry.pack(side=ctk.LEFT, padx=5, fill="x", expand=True)
             frame.pack(fill="x", expand=True, ipady=5)
             
     def load_set_tab(self) -> None:
