@@ -32,17 +32,21 @@ _Manually formatting the file can be a pain_, this app allows you to _concentrat
 
 -   `Process TBC`
 
-## For Linux / Mac / WSL developers
+## For Developers
 
 _Navigate to the directory where you'd like to install it_ and run:
 
--   `git clone https://github.com/DevDolphin7/EndpointsJSON.git`
--   `cd EndpointsJSON`
--   `./install.sh` <- this script creates a local virtual environment to install the dependencies and locally installs the src module for sibling imports
--   `source .virtual-environment/bin/activate`
--   `python3 src/app.py`
+| Linux / Mac / WSL                                              | Windows                                                        |
+| -------------------------------------------------------------- | -------------------------------------------------------------- |
+| - `git clone https://github.com/DevDolphin7/EndpointsJSON.git` | - `git clone https://github.com/DevDolphin7/EndpointsJSON.git` |
+| - `cd EndpointsJSON`                                           | - `cd EndpointsJSON`                                           |
+| - `./install.sh`                                               | - `.\install.bat`                                              |
+| - `source .virtual-environment/bin/activate`                   |                                                                |
+| - `python3 src/app.py`                                         | - `py src\app.py`                                              |
 
-You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code](https://code.visualstudio.com/docs/python/environments):
+> 💡The install script creates a local virtual environment to install the dependencies and locally installs the src module for sibling imports.
+
+> ⚠️ You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code](https://code.visualstudio.com/docs/python/environments):
 
 -   Open the Command Palette 🎨
 -   Look for "Python: Select Interpreter" 🐍
@@ -52,8 +56,19 @@ To keep the list of dependencies up to date, it's recommended adding and removin
 
 # Dependencies
 
+## Operating System
+
+Tested on:
+
+-   Windows 11
+-   Ubuntu 24.01
+
+## Software
+
 -   [Python 3](https://www.python.org/downloads/)
 -   [pip](https://packaging.python.org/en/latest/overview/)
+
+## Packages
 
 Pip package dependencies are listed in dependencies.txt:
 
@@ -65,7 +80,7 @@ Pip package dependencies are listed in dependencies.txt:
 -   pillow==11.1.0
 -   setuptools==75.8.0
 -   wheel==0.45.1
--   The `install.sh` script will install a local copy of the `src` directory as a module, run `pip freeze` to see it.
+-   The install script will install a local copy of the `src` directory as a module, run `pip freeze` to see it.
 
 # Support
 
