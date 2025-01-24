@@ -24,13 +24,27 @@ _Manually formatting the file can be a pain_, this app allows you to _concentrat
 
 # Getting Started
 
-## For Everyone
+## For Windows Users
 
 -   `Process TBC`
 
-## For Docker users
+## For Linux / Mac Docker Users
 
--   `Process TBC`
+Run:
+
+```CLI
+docker pull devdolphin7/endpoints-json
+```
+
+```CLI
+docker run -ti --rm \
+   -e DISPLAY=$DISPLAY \
+   -v /tmp/.X11-unix:/tmp/.X11-unix \
+   --mount src="/home",target=/mnt,type=bind \
+   devdolphin7/endpoints-json
+```
+
+> 💡 In order to access your endpoints.json file, the --mount argument will mount the host computer _/home_ directory to the docker OS _/mnt_ directory, this is where you can access your files through the app. Feel free to change these as required for your particular setup.
 
 ## For Developers
 
@@ -60,8 +74,8 @@ _Navigate to the directory where you'd like to install it_ and run:
 
 Tested on:
 
--   Windows 11
--   Ubuntu 24.01
+-   Windows 11 (.exe and developer setup)
+-   Ubuntu 24.01 (docker and developer setup)
 
 ## Software
 
@@ -85,5 +99,7 @@ Pip package dependencies are listed in dependencies.txt:
 # Support
 
 Feel free to drop me an email on [DevDolphin7@outlook.com](mailto:devdolphin7@outlook.com) or [raise a GitHub issue](https://github.com/DevDolphin7/EndpointsJSON/issues).
+
+Check out the [docker site](https://hub.docker.com/r/devdolphin7/endpoints-json).
 
 This repo is not actively maintained.
