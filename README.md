@@ -26,7 +26,13 @@ _Manually formatting the file can be a pain_, this app allows you to _concentrat
 
 ## For Windows Users
 
--   `Process TBC`
+On windows:
+
+-   Navigate to the [latest release](https://github.com/DevDolphin7/EndpointsJSON/releases)
+-   Click to download `EndpointsJSON.zip`
+-   Extract all the contents to your desired installation folder
+-   Open the `EndpointsJSON` folder
+-   Double click the `EndpointsJSON.exe` file
 
 ## For Linux / Mac Docker Users
 
