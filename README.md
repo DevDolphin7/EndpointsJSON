@@ -34,23 +34,9 @@ On windows:
 -   Open the `EndpointsJSON` folder
 -   Double click the `EndpointsJSON.exe` file
 
-## For Linux / Mac Docker Users
+## For Linux / macOS Docker Users
 
-Run:
-
-```CLI
-docker pull devdolphin7/endpoints-json
-```
-
-```CLI
-docker run -ti --rm \
-   -e DISPLAY=$DISPLAY \
-   -v /tmp/.X11-unix:/tmp/.X11-unix \
-   --mount src="/home",target=/mnt,type=bind \
-   devdolphin7/endpoints-json
-```
-
-> 💡 In order to access your endpoints.json file, the --mount argument will mount the host computer _/home_ directory to the docker OS _/mnt_ directory, this is where you can access your files through the app. Feel free to change these as required for your particular setup.
+Navigate to the [devdolphin7/endpoints-json](https://hub.docker.com/r/devdolphin7/endpoints-json) docker repo and follow the README.
 
 ## For Developers
 
