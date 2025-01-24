@@ -62,15 +62,15 @@ _Navigate to the directory where you'd like to install it_ and run:
 
 > 💡The install script creates a local virtual environment to install the dependencies and locally installs the src module for sibling imports.
 
-> ⚠️ You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code](https://code.visualstudio.com/docs/python/environments):
+You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code](https://code.visualstudio.com/docs/python/environments):
 
 -   Open the Command Palette 🎨
 -   Look for "Python: Select Interpreter" 🐍
 -   Select the one that contains ".virtual-environment"
 
-> 💡To keep the list of dependencies up to date, it's recommended adding and removing pip packages through the `add-package` and `remove-package` scripts 🚀
-
 # Dependencies
+
+If you modify the code, to keep the list of dependencies up to date it's recommended adding and removing pip packages through the `add-package` and `remove-package` scripts 🚀
 
 ## Operating System
 
