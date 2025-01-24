@@ -48,14 +48,16 @@ docker run -ti --rm \
 
 ## For Developers
 
+> 💡 Commands below assume the [software dependencies](#software) are already installed on the operating system.
+
 _Navigate to the directory where you'd like to install it_ and run:
 
 | Linux / Mac / WSL                                            | Windows                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `git clone https://github.com/DevDolphin7/EndpointsJSON.git` | `git clone https://github.com/DevDolphin7/EndpointsJSON.git` |
-| `cd EndpointsJSON`                                           | `cd EndpointsJSON`                                           |
+| `cd ./EndpointsJSON`                                         | `cd .\EndpointsJSON`                                         |
 | `./install.sh`                                               | `.\install.bat`                                              |
-| `source .virtual-environment/bin/activate`                   |                                                              |
+| `source .virtual-environment/bin/activate`                   | `.\.virtual-environment\Scripts\activate`                    |
 | `python3 src/app.py`                                         | `py src\app.py`                                              |
 
 > 💡The install script creates a local virtual environment to install the dependencies and locally installs the src module for sibling imports.
