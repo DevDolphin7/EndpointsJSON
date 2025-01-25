@@ -26,49 +26,43 @@ _Manually formatting the file can be a pain_, this app allows you to _concentrat
 
 ## For Windows Users
 
--   `Process TBC`
+On windows:
 
-## For Linux / Mac Docker Users
+-   Navigate to the [latest release](https://github.com/DevDolphin7/EndpointsJSON/releases)
+-   Click to download `EndpointsJSON.zip`
+-   Extract all the contents to your desired installation folder
+-   Open the `EndpointsJSON` folder
+-   Double click the `EndpointsJSON.exe` file
 
-Run:
+## For Linux / macOS Docker Users
 
-```CLI
-docker pull devdolphin7/endpoints-json
-```
-
-```CLI
-docker run -ti --rm \
-   -e DISPLAY=$DISPLAY \
-   -v /tmp/.X11-unix:/tmp/.X11-unix \
-   --mount src="/home",target=/mnt,type=bind \
-   devdolphin7/endpoints-json
-```
-
-> 💡 In order to access your endpoints.json file, the --mount argument will mount the host computer _/home_ directory to the docker OS _/mnt_ directory, this is where you can access your files through the app. Feel free to change these as required for your particular setup.
+Navigate to the [devdolphin7/endpoints-json](https://hub.docker.com/r/devdolphin7/endpoints-json) docker repo and follow the README.
 
 ## For Developers
+
+> 💡 Commands below assume the [software dependencies](#software) are already installed on the operating system.
 
 _Navigate to the directory where you'd like to install it_ and run:
 
 | Linux / Mac / WSL                                            | Windows                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | `git clone https://github.com/DevDolphin7/EndpointsJSON.git` | `git clone https://github.com/DevDolphin7/EndpointsJSON.git` |
-| `cd EndpointsJSON`                                           | `cd EndpointsJSON`                                           |
+| `cd ./EndpointsJSON`                                         | `cd .\EndpointsJSON`                                         |
 | `./install.sh`                                               | `.\install.bat`                                              |
-| `source .virtual-environment/bin/activate`                   |                                                              |
+| `source .virtual-environment/bin/activate`                   | `.\.virtual-environment\Scripts\activate`                    |
 | `python3 src/app.py`                                         | `py src\app.py`                                              |
 
 > 💡The install script creates a local virtual environment to install the dependencies and locally installs the src module for sibling imports.
 
-> ⚠️ You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code](https://code.visualstudio.com/docs/python/environments):
+You may wish to consider adding the virtual environment to the path of your development environment so the dependencies can be found. [To do this in VS Code](https://code.visualstudio.com/docs/python/environments):
 
 -   Open the Command Palette 🎨
 -   Look for "Python: Select Interpreter" 🐍
 -   Select the one that contains ".virtual-environment"
 
-> 💡To keep the list of dependencies up to date, it's recommended adding and removing pip packages through the `add-package` and `remove-package` scripts 🚀
-
 # Dependencies
+
+If you modify the code, to keep the list of dependencies up to date it's recommended adding and removing pip packages through the `add-package` and `remove-package` scripts 🚀
 
 ## Operating System
 
